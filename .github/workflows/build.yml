@@ -23,7 +23,6 @@ jobs:
         HEROKU_DOMAIN_APP: ${{ secrets.HEROKU_APP_NAME }}
       run: |
         heroku plugins:install https://github.com/heroku/heroku-repo.git
-        heroku repo:reset --app HEROKU_APP_NAME
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Running syntax tests with pylint
